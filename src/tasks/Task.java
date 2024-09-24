@@ -6,6 +6,8 @@ public class Task {
     private boolean isFulfilled;
     private double distance; // Distance in km
     private double progress; // Progress percentage
+    // Static variable to track the total number of tasks
+    private static int totalTasks = 0;
 
     public Task(String taskId, String description, double distance) {
         this.taskId = taskId;
@@ -13,6 +15,7 @@ public class Task {
         this.distance = distance;
         this.isFulfilled = false;
         this.progress = 0.0;
+        totalTasks++; // Increment the total number of tasks
     }
 
     public String getTaskId() {
@@ -41,5 +44,10 @@ public class Task {
 
     public void setProgress(double progress) {
         this.progress = progress;
+    }
+
+    // Static method to get the total number of tasks
+    public static int getTotalTasks() {
+        return totalTasks;
     }
 }

@@ -5,11 +5,14 @@ public abstract class Drone {
     private int batteryLife;
     private String taskAssigned;
     private double speed; // Speed in km/h
+    // Static variable to track the total number of drones
+    private static int totalDrones = 0;
 
     public Drone(String id, int batteryLife, double speed) {
         this.id = id;
         this.batteryLife = batteryLife;
         this.speed = speed;
+        totalDrones++; // Increment the total number of drones
     }
 
     public String getId() {
@@ -37,4 +40,9 @@ public abstract class Drone {
     }
 
     public abstract void performTask();
+
+    // Static method to get the total number of drones
+    public static int getTotalDrones() {
+        return totalDrones;
+    }
 }
