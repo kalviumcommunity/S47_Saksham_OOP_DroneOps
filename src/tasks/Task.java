@@ -6,6 +6,7 @@ public class Task {
     private boolean isFulfilled;
     private double distance; // Distance in km
     private double progress; // Progress percentage
+
     // Static variable to track the total number of tasks
     private static int totalTasks = 0;
 

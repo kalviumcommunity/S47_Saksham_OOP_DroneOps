@@ -24,5 +24,9 @@ public class Main {
         // Print task progress
         System.out.println("Task 1 Progress: " + task1.getProgress() + "%");
         System.out.println("Task 2 Progress: " + task2.getProgress() + "%");
+
+        // Print the total number of drones and tasks
+        System.out.println("Total number of drones: " + Drone.getTotalDrones());
+        System.out.println("Total number of tasks: " + Task.getTotalTasks());
     }
 }

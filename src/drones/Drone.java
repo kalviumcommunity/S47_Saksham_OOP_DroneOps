@@ -5,6 +5,7 @@ public abstract class Drone {
     private int batteryLife;
     private String taskAssigned;
     private double speed; // Speed in km/h
+
     // Static variable to track the total number of drones
     private static int totalDrones = 0;
 
